@@ -1,10 +1,8 @@
 <?php
 
 function update_oauth($conn, $handle, $token, $secret) {
-    $sql = 'SELECT * FROM users WHERE handle = ?';
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, 's', $handle);
-    $results = mysqli_stmt_execute($stmt);
+    $sql = 'SELECT * FROM users WHERE handle = "' . $handle . '"';
+    $result = mysqli_query($conn, $sql);
     $rows = mysqli_num_rows($result);
     if ($rows > 0) {
         // User exists; do an update.
