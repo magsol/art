@@ -20,15 +20,11 @@
                 A project in procrastination by a soon-to-graduate Ph.D. candidate. No, seriously.
             </p>
             <p class="desc">
-                This is a little side project to make it just a tiny bit easier to tally up your monthly workout statistics. Plus it's fun to code things like this.
+                On the 1st of each month, a little script will iterate through the users who have signed up with this app, aggregate a bunch of workout information from Garmin Connect, and post a summary of that month's athletic shenanigans on Twitter. <a href="../images/example.png" data-lightbox="image-4">Here's an example</a>. Simple!
             </p>
             <span class="glyphicon glyphicon-cog"></span>
             <p class="desc">
-                Basically this uses two mechanisms of authentication: OAuth for Twitter, and username / password for Garmin Connect. The former cannot do anything besides post to your Twitter account, and you can always revoke its posting privileges if it's been a bad app.
-            </p>
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-            <p class="desc">
-                The latter, unfortunately, is unavoidable (unless <a href="http://garmin.blogs.com/my_weblog/2014/06/garmin-announces-partnerships-with-leading-fitness-training-applications-trainingpeaks-and-runcoach-.html#.U5cKBnVdWkA" target="_blank">this story goes somewhere!</a>). Your username and password will be encrypted in the database, and you have my word that I will never decrypt them manually; they will be used only to authenticate with Garmin Connect. Of course, it really comes down to whether or not you trust <a href="../images/thisguy.jpg" data-lightbox="image-1">a guy like me</a>.
+                Unfortunately, the current situation requires storing your Garmin Connect username and password (at least until <a href="http://garmin.blogs.com/my_weblog/2014/06/garmin-announces-partnerships-with-leading-fitness-training-applications-trainingpeaks-and-runcoach-.html#.U5cKBnVdWkA" target="_blank">this story goes somewhere!</a>). They will be encrypted, and you have my word that I will never decrypt them manually; they will be used only to authenticate with Garmin Connect. Of course, it really comes down to whether or not you trust <a href="../images/thisguy.jpg" data-lightbox="image-1">a guy like me</a>.
             </p>
             <span class="glyphicon glyphicon-thumbs-down"></span>
             <p class="desc">

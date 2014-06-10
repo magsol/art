@@ -29,4 +29,6 @@ Dependencies
 
  1. PHP / MySQL
  2. [twitteroauth](https://github.com/abraham/twitteroauth)
- 3. Python
+ 3. [Smarty](http://www.smarty.net/)
+ 4. Python
+ 5. mechanize

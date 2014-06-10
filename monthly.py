@@ -87,22 +87,22 @@ def activities(agent, increment = 100):
     # All done! Return the information we want.
     return [totalActivities, distance, calories]
 
-def main(c_key, c_secret):
+def main():
     global DBHOST, DBUSER, DBPASS, DBNAME, CONSUMER_KEY, CONSUMER_SECRET
     db = MySQLdb.connect(host = DBHOST, user = DBUSER, passwd = DBPASS, db = DBNAME)
     c = db.cursor()
     c.execute("SELECT * FROM users ORDER BY hour ASC")
     for row in c.fetchall():
         handle, token, secret, username, password, hour, minute = row
-        USERNAME = base64.decode(username)
-        PASSWORD = base64.decode(password)
+        USERNAME = base64.b64decode(username)
+        PASSWORD = base64.b64decode(password)
 
         curr = datetime.datetime.now()
         next = datetime.datetime(year = curr.year, month = curr.month, day = curr.day,
             hour = hour, minute = minute)
         
         dsec = next - curr
-        time.sleep(0 if dsec.seconds < 0 else dsec.seconds)
+        time.sleep(0 if dsec.days < 0 else dsec.seconds)
 
         # Create the agent and log in.
         agent = me.Browser()
@@ -117,3 +117,6 @@ def main(c_key, c_secret):
         api = tweepy.API(auth)
         status = "My training last month: %s workout%s for %.2f mi and %d calories burned." % (workouts, 's' if workouts != 1 else '', miles, int(calories))
         api.update_status(status = status)
+
+if __name__ == "__main__":
+    main()
