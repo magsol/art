@@ -25,6 +25,9 @@ define('DBUSER', 'your_database_user_here');
 define('DBPASS', 'your_database_password_here');
 define('DBHOST', 'your_database_host_here');
 
+// Encryption.
+define('KEY', 'your_encryption_key_here');
+
 $conn = @mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 if (!$conn) {
   echo 'Unable to establish a database connection. Please let me know and check back later.';

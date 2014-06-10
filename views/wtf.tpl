@@ -32,7 +32,7 @@
             </p>
             <span class="glyphicon glyphicon-thumbs-down"></span>
             <p class="desc">
-                However! I have made it possible for you to delete your information at any time. Just visit this website and delete it. No hard feelings, brosef.
+                However! I will soon make it possible for you to delete your information at any time. Just visit this website and delete it. No hard feelings, brosef.
             </p>
             <span class="glyphicon glyphicon-new-window"></span>
             <p class="desc">

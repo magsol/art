@@ -18,7 +18,7 @@
             <h1 class="cover-heading">Step 2: Provide Garmin Connect info.</h1>
             <p class="lead">If you are <a href="{$user_url}" data-lightbox="image-3" data-title="{$user_handle}"><strong>{$user_name}</strong></a>, sah-WHEAT! If not, <a href="/twathletic/clear/"><strong>click this helpful link</strong></a>.</p>
             <p>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" method="post" action="/twathletic/submit/">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
                 <div class="col-sm-9">

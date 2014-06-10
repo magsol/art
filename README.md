@@ -22,6 +22,7 @@ This is built as a web front-end for users to add an app to their Twitter accoun
  - Add **Strava**, **MapMyRun** to supported sites
  - Add **Cycling** to supported activities
  - Customizable tweet format
+ - Delete all records from database (username, password, twitter handle, etc)
 
 Dependencies
 ------------
