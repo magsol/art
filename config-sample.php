@@ -5,6 +5,16 @@
  * A single location to store configuration.
  */
 
+// Smarty setup.
+define('SMARTY_DIR', '/path/to/smarty/libs/');
+require_once(SMARTY_DIR . 'Smarty.class.php');
+$smarty = new Smarty();
+$smarty->setTemplateDir('/path/to/templates/');
+$smarty->setCompileDir('/path/to/compile/');
+$smarty->setConfigDir('/path/to/configs/');
+$smarty->setCacheDir('/path/to/cache/');
+
+// Twitter App OAuth information.
 define('CONSUMER_KEY', 'consumer_key');
 define('CONSUMER_SECRET', 'consumer_secret');
 define('OAUTH_CALLBACK', 'oauth_callback_url');

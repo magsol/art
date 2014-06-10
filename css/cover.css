@@ -40,23 +40,6 @@ body {
           box-shadow: inset 0 0 500px rgba(0,0,0,.9);
 }
 
-/*
-.bgimage {
-  background-image: url(../images/bg.jpg);
-  width: 125%;
-  top: 0;
-  left: 0;
-  height: 125%; 
-  opacity: 0.95;
-  position: fixed;
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  padding: 0;
-  margin: 0;
-  z-index: -1;
-}
-*/
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -78,7 +61,13 @@ body {
   padding: 30px;
 }
 
+.desc {
+  text-align: left;
+}
 
+.desc a {
+  color: #666;
+}
 /*
  * Header
  */
