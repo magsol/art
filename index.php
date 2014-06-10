@@ -136,6 +136,8 @@ if (isset($_GET['action'])) {
 				session_destroy();
 			} else {
 				// Success!
+				$msg = "I guess we can safely assume you know what you're doing. Either that, or you planted something sinister in those OAuth settings. You monster!";
+				$smarty->assign('message', $msg);
 				$smarty->display('success.tpl');
 			}
 
@@ -147,8 +149,17 @@ if (isset($_GET['action'])) {
 			header("Location: /twathletic/");
 			break;
 
+		case 'delete':
+			// Delete all the data associated with this user.
+			delete_user($conn, $_SESSION['access_token']['screen_name']);
+			$msg = "All your data has been purged from my database. All that innocent, hardworking data. I hope you're satisfied. You monster!";
+			$smarty->assign('message', $msg);
+			$smarty->display('success.tpl');
+
 		default:
-			// 404
+			$trailingSlash = $_GET['action'][strlen($_GET['action']) - 1] == '/';
+			$smarty->assign('randomVar', ($trailingSlash ? 0 : 1));
+			$smarty->display('404.tpl');
 
 	}
 } else {

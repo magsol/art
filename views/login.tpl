@@ -47,11 +47,31 @@
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Submit credentials</button>
-                </div>
+                <button type="submit" class="btn btn-default">Submit credentials</button>
               </div>
             </form>
+            </p>
+
+            <p>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Don't ever click here. Unless you want to.
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                  <div class="panel-body alert alert-danger">
+                    Alternatively, delete all your information from my database! Everything will be purged. EVERYTHING! Well, except for the app itself; you'll still need to deauthorize that from within your Twitter account. PWND LOL.
+                    <br />
+                    <form class="form-horizontal" role="form" method="post" action="/twathletic/delete/">
+                      <button type="submit" class="btn btn-danger">NUKE MY INFO KTHX</button>
+                    </form>  
+                  </div>
+                </div>
+              </div>
             </p>
           </div>
 
