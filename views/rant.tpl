@@ -9,7 +9,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Twathletic</h3>
+              <h3 class="masthead-brand">{$SITE_NAME}</h3>
               {include file='menu.tpl' active='rant'}
             </div>
           </div>
@@ -23,7 +23,7 @@
             <div class="media desc">
             <span class="glyphicon glyphicon-tasks pull-left"></span>
               <div class="media-body">
-                <a href="https://github.com/magsol/twathletic" target="_blank"><h4 class="media-heading">s0urCe c0d3</h4></a>
+                <a href="https://github.com/magsol/twitletic" target="_blank"><h4 class="media-heading">s0urCe c0d3</h4></a>
                 Drop mad bug reports or wicked constructive witticisms.
               </div>
             </div>

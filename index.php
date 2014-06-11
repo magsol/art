@@ -52,7 +52,7 @@ if (isset($_GET['action'])) {
 			if (isset($_REQUEST['oauth_token']) &&
 				$_SESSION['oauth_token'] !== $_REQUEST['oauth_token']) {
 				$_SESSION['oauth_status'] = 'oldtoken';
-				header('Location: /twathletic/clear/');
+				header('Location: ' . SITE_ROOT . 'clear/');
 			}
 
 			/* Create TwitteroAuth object with app key/secret and token 
@@ -85,7 +85,7 @@ if (isset($_GET['action'])) {
 			if (200 == $connection->http_code) {
 				/* The user has been verified and the access tokens can be saved for future use */
 				$_SESSION['status'] = 'verified';
-				header('Location: /twathletic/login/');
+				header('Location: ' . SITE_ROOT . 'login/');
 			} else {
 				$msg = 'Received a bad HTTP code: ' . $connection->http_code . '. Any idea what it means?';
 				$smarty->assign('message', $msg);
@@ -97,7 +97,7 @@ if (isset($_GET['action'])) {
 		case 'login':
 			// User adds login credentials for Garmin Connect.
 			if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
-				header('Location: /twathletic/clear/');
+				header('Location: ' . SITE_ROOT . 'clear/');
 			}
 			$token = $_SESSION['access_token'];
 			$connection = $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET,
@@ -113,7 +113,7 @@ if (isset($_GET['action'])) {
 		case 'submit':
 			// User has submitted login information.
 			if (!isset($_POST['username'])) {
-				header('Location: /twathletic/clear/');
+				header('Location: ' . SITE_ROOT . 'clear/');
 			}
 
 			// Pull data from the form, clean it, and insert it.
@@ -123,7 +123,7 @@ if (isset($_GET['action'])) {
 			$minute = intval($_POST['minute']);
 			if (strlen($username) <= 0 || strlen($password) <= 0 || 
 				$hour > 20 || $hour < 8 || $minute < 0 || $minute > 59) {
-				header("Location: /twathletic/login/");
+				header('Location: ' . SITE_ROOT . 'login/');
 			}
 			$handle = $_SESSION['access_token']['screen_name'];
 			$username = encrypt_string($username, KEY);
@@ -146,7 +146,7 @@ if (isset($_GET['action'])) {
 		case 'clear':
 			// Clear the session.
 			session_destroy();
-			header("Location: /twathletic/");
+			header('Location: ' . SITE_ROOT);
 			break;
 
 		case 'delete':

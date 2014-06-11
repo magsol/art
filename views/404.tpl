@@ -13,7 +13,7 @@
           {$action}
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Twathletic</h3>
+              <h3 class="masthead-brand">{$SITE_NAME}</h3>
               {include file='menu.tpl' active='home'}
             </div>
           </div>

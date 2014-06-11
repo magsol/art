@@ -5,6 +5,10 @@
  * A single location to store configuration.
  */
 
+// Site root.
+define('SITE_ROOT', '/twitletic/');
+define('SITE_NAME', 'Twitletic');
+
 // Smarty setup.
 define('SMARTY_DIR', '/path/to/smarty/libs/');
 require_once(SMARTY_DIR . 'Smarty.class.php');
@@ -13,6 +17,8 @@ $smarty->setTemplateDir('/path/to/templates/');
 $smarty->setCompileDir('/path/to/compile/');
 $smarty->setConfigDir('/path/to/configs/');
 $smarty->setCacheDir('/path/to/cache/');
+$smarty->assign('SITE_ROOT', SITE_ROOT);
+$smarty->assign('SITE_NAME', SITE_NAME);
 
 // Twitter App OAuth information.
 define('CONSUMER_KEY', 'consumer_key');

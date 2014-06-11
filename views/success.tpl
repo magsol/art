@@ -9,7 +9,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Twathletic</h3>
+              <h3 class="masthead-brand">{$SITE_NAME}</h3>
               {include file='menu.tpl' active='home'}
             </div>
           </div>
@@ -20,7 +20,7 @@
               {$message}
             </p>
             <p class="lead">
-              <a href="/twathletic/clear/" class="btn btn-lg btn-default">Click here to move on with your life.</a>
+              <a href="{$SITE_ROOT}clear/" class="btn btn-lg btn-default">Click here to move on with your life.</a>
             </p>
           </div>
 

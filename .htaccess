@@ -1,8 +1,8 @@
-# BEGIN Twathletic
+# BEGIN Twitletic
 <IfModule mod_rewrite.c>
 
 RewriteEngine On
-RewriteBase /twathletic/
+RewriteBase /twitletic/
 
 RewriteRule ^(css|js|images|index)($|/) - [L]
 
@@ -11,4 +11,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?action=$1 [QSA]
 
 </IfModule>
-# END Twathletic
+# END Twitletic
