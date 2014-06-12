@@ -104,7 +104,11 @@ if (isset($_GET['action'])) {
 				$token['oauth_token'], $token['oauth_token_secret']);
 			$results = $connection->get('users/show', array('screen_name' => $token['screen_name']));
 
-			$smarty->assign('user_url', $results->profile_image_url);
+			$chunks = explode("_", $results->profile_image_url);
+			$ext = explode(".", $chunks[count($chunks) - 1]);
+			array_pop($chunks);
+			$chunks = implode("_", $chunks);
+			$smarty->assign('user_url', $chunks . "." . $ext[1]);
 			$smarty->assign('user_name', $results->name);
 			$smarty->assign('user_handle', $token['screen_name']);
 			$smarty->display('login.tpl');
