@@ -34,8 +34,9 @@ def login(agent, username, password):
 
     agent.submit()
     agent.open(REDIRECT)
-    if agent.title().find('Sign In') > -1:
-        quit('Login incorrect! Check your credentials.')
+    if agent.title().find('Error') > -1:
+        return False
+    return True
 
 def activities(agent, increment = 100):
     global ACTIVITIES
@@ -106,7 +107,9 @@ def main():
 
         # Create the agent and log in.
         agent = me.Browser()
-        login(agent, USERNAME, PASSWORD)
+        if not login(agent, USERNAME, PASSWORD):
+            print 'Skipping %s due to failed login.' % USERNAME
+            continue
 
         # Scrape all the activities.
         workouts, miles, calories = activities(agent)
