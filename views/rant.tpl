@@ -17,7 +17,7 @@
           <div class="inner cover">
             <h1 class="cover-heading">Come at me, bro!</h1>
             <p class="lead">
-                <a href="http://miamigrime.com/miami/wp-content/uploads/2012/08/brethren.jpeg" data-lightbox="image-2">Bring it!</a>
+                <a href="../images/comeatme.jpg" data-lightbox="image-2">Bring it!</a>
             </p>
 
             <div class="media desc">
